@@ -6,8 +6,8 @@ export interface CityProps {
   longitude: number,
   latitude: number,
 }
-
-export async function getCityByNameService(name: string) {
+// a promise é definida de forma explicita 
+export async function getCityByNameService(name: string): Promise<CityProps[]> { // definir no final da função ira indicar o retorno desta
   try {
     const { data } = await api.get(`/weather?q=${name}`);
 
