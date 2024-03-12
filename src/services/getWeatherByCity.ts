@@ -19,12 +19,13 @@ export interface WeatherAPIResponseProps {
       temp_min: number;
       temp_max: number;
       temp_kf: number;
+      humidity: number;
     }
     wind: {
       speed: number;
     }
     weather: {
-      main: string;
+      main: 'Snow' | 'Clear' | 'Rain' | 'Clouds'; // Union de tipos possíveis
       description: string;
     }[]
   }[]
