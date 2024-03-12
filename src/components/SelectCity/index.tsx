@@ -4,8 +4,13 @@ import { useEffect, useState } from 'react';
 import { Input } from '../Input';
 import { CityProps, getCityByNameService } from '../../services/getCityByNameService';
 
-export function SelectCity({ onSelect }) {
-  const [city, setCity] = useState<CityProps[]>([]); // agora ele é um array de cidades
+// definir type para função callback
+interface Props {
+  onSelect: (item: CityProps) => void
+}
+
+export function SelectCity({ onSelect }: Props) {
+  const [city, setCity] = useState<CityProps[]>([]); // agora ele é um array de cidades, de forma genérica (flexível)
   const [search, setSearch] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
