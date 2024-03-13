@@ -26,16 +26,37 @@ export interface WeatherAPIResponseProps {
       temp_max: number;
       temp_kf: number;
       humidity: number;
-    }
+    };
     wind: {
       speed: number;
-    }
+    };
     weather: {
       main: WeatherIconsKeysProps;
       description: string;
-    }[],
+    }[];
     dt_txt: string;
   }[]
+}
+
+export interface WeatherResponseProps {
+  temp: number;
+  temp_min: number;
+  temp_max: number;
+  description: string;
+  details: typeof weatherIcons['Clear'];
+}
+
+export interface DetailsResponseProps {
+  feels_like: number;
+  probability: number;
+  wind_speed: number;
+  humidity: number;
+  temp_kf: number;
+}
+
+interface TodayProps {
+  weather: WeatherResponseProps;
+  details: DetailsResponseProps;
 }
 
 export async function getWeatherByCity({
@@ -47,7 +68,7 @@ export async function getWeatherByCity({
   )
   const { main, weather, wind, pop } = data.list[0]
 
-  const today = {
+  const today: TodayProps = {
     weather: {
       temp: Math.ceil(main.temp),
       temp_min: Math.floor(main.temp_min),
