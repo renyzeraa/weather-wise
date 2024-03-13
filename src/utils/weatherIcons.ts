@@ -47,3 +47,6 @@ export const weatherIcons = {
     icon_night: iconSnowNight,
   },
 }
+
+// retorna as chaves deste tipo dinamicamente
+export type WeatherIconsKeysProps = keyof typeof weatherIcons

@@ -2,7 +2,7 @@ import dayjs from 'dayjs'
 
 import { api } from './api'
 import { getNextDays } from '../utils/getNextDays'
-import { weatherIcons } from '../utils/weatherIcons'
+import { WeatherIconsKeysProps, weatherIcons } from '../utils/weatherIcons'
 
 // definindo o type dos parâmetros deste método
 interface WeatherByCityProps {
@@ -10,6 +10,11 @@ interface WeatherByCityProps {
   longitude: number
 }
 
+// definindo o type dos parâmetros deste método
+/*type WeatherIconsKeysProps = 'Snow' | 'Clear' | 'Rain' | 'Clouds' */
+// Union de tipos possíveis
+
+// para personalizados usamos interface
 export interface WeatherAPIResponseProps {
   list: {
     pop: number;
@@ -25,7 +30,7 @@ export interface WeatherAPIResponseProps {
       speed: number;
     }
     weather: {
-      main: 'Snow' | 'Clear' | 'Rain' | 'Clouds'; // Union de tipos possíveis
+      main: WeatherIconsKeysProps;
       description: string;
     }[]
   }[]
