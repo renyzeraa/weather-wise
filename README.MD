@@ -14,7 +14,7 @@ O objetivo deste projeto é permitir aos usuários pesquisar o tempo para uma ci
 - TypeScript
 - HTML
 - CSS
-- API de Previsão do Tempo
+- API de Previsão do Tempo [Open Weather](https://openweathermap.org/)
 
 ## Configuração do Ambiente de Desenvolvimento
 
