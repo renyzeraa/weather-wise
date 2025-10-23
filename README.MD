@@ -35,6 +35,8 @@ O objetivo deste projeto é permitir aos usuários pesquisar o tempo para uma ci
 - Implementar testes automatizados para garantir a qualidade do código.
 - Adicionar suporte para geolocalização.
 
+<a href="https://weather-wise-lilac-alpha.vercel.app/"> Deploy 🚀</a>
+
 [Link Figma](<https://www.figma.com/file/BzAbIgEtvMBmadWR5Abmfh/TypeWeather-(Community)?type=design&node-id=0%3A1&mode=dev&t=QqaASzMEWR27vhQu-1>)
 
 ## Contato
